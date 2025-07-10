@@ -1,0 +1,53 @@
+// eslint.config.js
+export default [
+  {
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: "module",
+      globals: {
+        // Визначення глобальних змінних
+        window: "readonly",
+        document: "readonly",
+        process: "readonly",
+      },
+    },
+    extends: [
+      "eslint:recommended",
+      "plugin:import/errors",
+      "plugin:react/recommended",
+      "plugin:jsx-a11y/recommended",
+      "plugin:react-hooks/recommended",
+      "prettier",
+    ],
+    plugins: ["react", "import", "jsx-a11y"],
+    parserOptions: {
+      ecmaVersion: 2022,
+      sourceType: "module",
+      ecmaFeatures: {
+        jsx: true,
+      },
+    },
+    env: {
+      es6: true,
+      browser: true,
+      node: true,
+    },
+    settings: {
+      react: {
+        version: "detect",
+      },
+      "import/resolver": {
+        node: {
+          extensions: [".js", ".jsx"],
+        },
+      },
+    },
+    rules: {
+      // Додайте правила ESLint тут
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off",
+      "no-unused-vars": "warn",
+      "no-console": "warn",
+    },
+  },
+];
