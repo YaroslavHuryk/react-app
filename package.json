@@ -33,7 +33,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.11",
-    "vite": "^5.4.3"
+    "vite": "^7.0.4"
   },
   "dependencies": {
     "-": "^0.0.1",
